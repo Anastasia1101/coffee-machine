@@ -5,7 +5,7 @@
 }
 .coffee-item {
   background-color: rgba(0, 0, 0, 0.7); /*rgba - формат для полупрозрачного фона, где "а" - это альфа-канал или значение прозрачности*/
-  border-radius: 50px;
+  border-radius: calc(75px / 2); /*функция calc исп-тся для указания вычисляемого значения свойств, которые в качестве значений используют размер*/
   margin: 15px; /*расстояние (отступ) от края элементов*/
   cursor: pointer; /*изменение курсора при наведении на элементы*/
 }
@@ -17,7 +17,7 @@
 .coffee-item img {
   background-color: white;
   border-radius: 50%;
-  height: 100px;
+  height: 75px;
 }
 .coffee-item span {
   color: white;
@@ -36,6 +36,12 @@
   padding: 10px;
 } 
 
-.cup img {
-  width: 100%; /*вмещаем изображение кружки в контейнер,чтобы не заходила за края*/
+.cup img, .atm img {
+  width: 100%; /*вмещаем изображение кружки и АТМ в контейнер,чтобы не заходила за края*/
+}
+
+.change-box {
+  background: grey;
+  border: 2px solid black;
+  min-height: 100px;
 }

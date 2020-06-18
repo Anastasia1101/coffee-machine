@@ -48,7 +48,17 @@
               </div>
             </div>
             <div class="col-6"> <!-- Баланс, АТМ, сдача -->
-              
+              <div class="input-group mb-3"> <!-- из bootstrap -->
+                <input type="text" class="form-control balance" placeholder="Баланс">
+                <div class="input-group-append">
+                  <span class="input-group-text">&#8381;</span>
+                </div>
+              </div>
+              <div class="atm">
+                <img src="img/bill_acc.png" alt="">
+              </div>
+              <button class="btn btn-primary btn-block mt-3">Сдача</button> <!-- btn - форма кнопки, btn-primary - красит фон в синий и текст в белый, btn-block - делает кнопку блочной (во всю ширину),  mt-3 - margin top 3 - отступ сверху -->
+              <div class="change-box mt-3"></div>
             </div>
           </div>
         </div>
