@@ -1,3 +1,52 @@
 "use strict";
 
-alert("Скрипт подключен!");
+let balance = document.querySelector(".balance");
+
+function cookCoffee(price, name) {
+  if (balance.value >= price) {
+    balance.value -= price;
+    balance.style.backgroundColor = " "; //Вернуть белый фон
+    changeDisplayText("Ваш " + name + " готовится");
+    startCooking();
+  } else {
+    changeDisplayText("Недостаточно средств");
+    balance.style.backgroundColor = "rgb(255, 50, 50)";
+  }
+}
+
+function startCooking() {
+  changeProgress(100);
+  setTimeout(function() {
+    changeDisplayText("Ваш кофе готов!");
+  }, 5000);
+}
+//Планирование
+/*let timeout = setTimeout(function() {
+  changeDisplayText("Передумали заказывать?");
+}, 3000); //отрабатывает только один раз
+let interval = setInterval(function() {
+  changeDisplayText("Кофе: " + Date.now());
+}, 4000); //отрабатывает пока не отключим (каждый определенный промежуток времени)
+
+setTimeout(function() {
+  clearTimeout(timeout); //Очищаем таймаут (больше не отработает)
+  clearInterval(interval); //Очищаем интервал (больше не отработает)
+  console.log("Timeout and interval are cleared");
+}, 1000); */
+
+function changeProgress(persent) {
+  let progress = document.querySelector(".progress-bar");
+  progress.style.width = persent + "%";
+  progress.style.transition = "width 5s";
+}
+function changeDisplayText(text) {
+  let displayText = document.querySelector(".display-text");
+  if (text.length > 25) {
+    displayText.innerHTML = text.slice(0, 25) + "...";
+  } else {
+    displayText.innerHTML = text;
+  }
+}
+
+
+
