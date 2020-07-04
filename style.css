@@ -50,6 +50,7 @@
 }
 
 .change-box {
+  position: relative;
   background: grey;
   border: 2px solid black;
   min-height: 100px;
@@ -57,9 +58,21 @@
 
 .money img {
   width: 20%;
+  transition: transform 200ms ease-in-out; 
+  /* ease-in-out изменяет кривую времени для анимации, т.е. ускоряет --> замедляет --> ускоряет */
 }
 
-
+.cash-catcher {
+  position: absolute;
+  border: 2px solid red;
+  background-color: white;
+  width: 75%;
+  height: 45%;
+  margin-left: 5%;
+  margin-top: 10%;
+  box-sizing: border-box;
+  overflow: hidden;
+} 
 
 
 

@@ -49,12 +49,13 @@
             </div>
             <div class="col-6"> <!-- Баланс, АТМ, сдача -->
               <div class="input-group mb-3"> <!-- из bootstrap -->
-                <input type="text" class="form-control balance" placeholder="Баланс">
+                <input type="text" class="form-control balance" placeholder="Баланс" readonly>
                 <div class="input-group-append">
                   <span class="input-group-text">&#8381;</span>
                 </div>
               </div>
               <div class="atm">
+                <div class="cash-catcher"></div>
                 <img src="img/bill_acc.png" alt="">
               </div>
               <button class="btn btn-primary btn-block mt-3 change-btn">Сдача</button> <!-- btn - форма кнопки, btn-primary - красит фон в синий и текст в белый, btn-block - делает кнопку блочной (во всю ширину),  mt-3 - margin top 3 - отступ сверху -->
@@ -65,9 +66,9 @@
       </div>
     </div>
     <div class="money">
-      <img src="img/100rub.jpg" alt="">
-      <img src="img/500rub.jpg" alt="">
-      <img src="img/50rub.jpg" alt="">
+      <img src="img/100rub.jpg" cost="100" alt="">
+      <img src="img/500rub.jpg" cost="500"  alt="">
+      <img src="img/50rub.jpg" cost="50"  alt="">
     </div>
     
     <!-- Optional JavaScript -->
