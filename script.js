@@ -153,6 +153,10 @@ function eatBill(bill) {
   bill.style.transform = "translateY(50%) rotate(90deg)";
   setTimeout(function() {
     bill.style.transform = "translateY(-200%) rotate(90deg)";
+    bill.ontransitionend = function() { //Событие transitionend - окончание транзиции CSS
+    console.log("Транцизия закончилась");
+    bill.remove();
+    };
   }, 10);
 }
 
